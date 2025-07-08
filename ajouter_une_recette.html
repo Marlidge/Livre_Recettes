@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Ajouter une Recette</title>
-        <link href="docs.css/style.css" rel="stylesheet" >
-        <link href="docs.css/ajouter.css" rel="stylesheet" >
+        <link href="styles.css/style.css" rel="stylesheet" >
+        <link href="styles.css/ajouter.css" rel="stylesheet" >
         <script src="ajouter_recette.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,63 +29,52 @@
             </nav>
         </header>
 
-         <main>
+         <main class="add-recipe-container">
             <section>
 
                 <h1>Ajouter une Recette</h1>
                 
-                <form method="get" action="#">
+                <form class="add-recipe-form" method="get" action="#">
 
-                    <div class="fiche_recette">
-                        <div class="nom_recette">
-                            <label for="nom">Nom de la Recette : </label>
-                            <input type="text" name="nom" id="nom">
-                        </div>
+                    <div class="form-group">
+                        <label for="recipe-name">Nom de la Recette</label>
+                        <input type="text" id="recipe-name" name="nom" placeholder="Nom de la recette">
+                    </div>
 
-                        <div class="macronutriments">
-
-                        </div>
-
-                        <div class="tags">
-                            <p>
-                                Cocher les catégories correspondantes à la recette : <br>
-                                <input type="checkbox" name="breakfast" id="breakfast"> <label for="breakfast">Breakfast</label>
-                                <br>
-
-                                <input type="checkbox" name="lunch" id="lunch"> <label for="lunch">Lunch</label>
-                                <br>
-
-                                <input type="checkbox" name="snack" id="snack"> <label for="snack">Snack</label>
-                                <br>
-
-                                <input type="checkbox" name="dinner" id="dinner"> <label for="dinner">Dinner</label>
-                                <br>
-                            </p>
-                            
-                        </div>
-
-                        <div class="ingredients">
-
-                            <label form="ingredients_input">Ingrédients :</label><br>
-                            <input type="text" id="ingredients_input" placeholder="Ex : 2 tomates">
-                            <button type="button" onclick="ajouterIngredient()">Ajouter</button>
-
-                            <ul id="liste-ingredients"></ul>
-
-                        </div>
-
-                        <div class="instruction">
-
-                            <label form="instructions_input">Instructions :</label><br>
-                            <input type="text" id="instructions_input">
-                            <button type="button" onclick="ajouterInstructions()">Ajouter</button>
-
-                            <ol id="liste-instructions"></ol>
-                            
-                        </div>
+                    <div class="macronutriments">
 
                     </div>
-    
+
+                    <div class="form-group">
+                        <p>
+                            <p>Catégories :</p> 
+                            <label><input type="checkbox" name="category" value="breakfast"> Breakfast</label>
+                            <label><input type="checkbox" name="category" value="lunch"> Lunch</label>
+                            <label><input type="checkbox" name="category" value="snack"> Snack</label>
+                            <label><input type="checkbox" name="category" value="dinner"> Dinner</label>
+                        </p>
+                            
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="ingredient">Ingrédients</label>
+                        <input type="text" id="ingredient" placeholder="Ex : 2 tomates">
+                        <button type="button" onclick="ajouterIngredient()">Ajouter</button>
+                        <ul id="liste-ingredients"></ul>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="instruction">Instructions</label>
+                        <input type="text" id="instructions_input" placeholder="Décrivez une étape">
+                        <button type="button" onclick="ajouterInstructions()">Ajouter</button>
+                        <ol id="liste-instructions"></ol>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enregistrer la recette</button>
+
                 </form>
 
             </section>
@@ -95,3 +84,4 @@
     </body>
     
 </html>
+

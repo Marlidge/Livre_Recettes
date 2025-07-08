@@ -1,4 +1,88 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #FAFAF0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #4cb65c;
+  font-family: 'Montserrat', sans-serif;
+}
+
 p {
   color: black;
-  font-size: 1em;
+  text-decoration: none;
+}
+
+.add-recipe-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.form-group textarea {
+  min-height: 100px;
+}
+
+.form-group button {
+  margin-top: 10px;
+  align-self: flex-start;
+  background-color: #FFE66D;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-group button:hover {
+  background-color: #E6D75F;
+}
+
+.submit-btn {
+  padding: 12px 20px;
+  background-color: #A8D5BA;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #89c5a2;
 }
