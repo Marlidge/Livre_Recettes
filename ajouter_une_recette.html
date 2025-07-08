@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ajouter une Recette</title>
+        <link href="docs.css/style.css" rel="stylesheet" >
+        <link href="docs.css/ajouter.css" rel="stylesheet" >
+        <script src="ajouter_recette.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+            <a href="accueil.html" class="lien-icone">
+                    <img src="images/recipe-book.png" alt="Logo Livre de recette">
+                    Livres de Recettes
+                </a>
+
+                <div class="navigation">
+                    <a href="accueil.html">Accueil</a>
+                    <a href="recettes">Recettes</a>
+                    <a href="ajouter_une_recette.html">Ajouter une Recette</a>
+                    <a href="favoris">Favoris</a>
+                    <a href="recherche">Recherche</a>
+                </div>
+            </nav>
+        </header>
+
+         <main>
+            <section>
+
+                <h1>Ajouter une Recette</h1>
+                
+                <form method="get" action="#">
+
+                    <div class="fiche_recette">
+                        <div class="nom_recette">
+                            <label for="nom">Nom de la Recette : </label>
+                            <input type="text" name="nom" id="nom">
+                        </div>
+
+                        <div class="macronutriments">
+
+                        </div>
+
+                        <div class="tags">
+                            <p>
+                                Cocher les catégories correspondantes à la recette : <br>
+                                <input type="checkbox" name="breakfast" id="breakfast"> <label for="breakfast">Breakfast</label>
+                                <br>
+
+                                <input type="checkbox" name="lunch" id="lunch"> <label for="lunch">Lunch</label>
+                                <br>
+
+                                <input type="checkbox" name="snack" id="snack"> <label for="snack">Snack</label>
+                                <br>
+
+                                <input type="checkbox" name="dinner" id="dinner"> <label for="dinner">Dinner</label>
+                                <br>
+                            </p>
+                            
+                        </div>
+
+                        <div class="ingredients">
+
+                            <label form="ingredients_input">Ingrédients :</label><br>
+                            <input type="text" id="ingredients_input" placeholder="Ex : 2 tomates">
+                            <button type="button" onclick="ajouterIngredient()">Ajouter</button>
+
+                            <ul id="liste-ingredients"></ul>
+
+                        </div>
+
+                        <div class="instruction">
+
+                            <label form="instructions_input">Instructions :</label><br>
+                            <input type="text" id="instructions_input">
+                            <button type="button" onclick="ajouterInstructions()">Ajouter</button>
+
+                            <ol id="liste-instructions"></ol>
+                            
+                        </div>
+
+                    </div>
+    
+                </form>
+
+            </section>
+
+        </main>
+
+    </body>
+    
+</html>

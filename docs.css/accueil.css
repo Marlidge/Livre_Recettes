@@ -1,0 +1,57 @@
+p {
+  color: white;
+  font-size: 1.5em;
+}
+
+.accueil-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-image: url('../images/cuisine_banniere.jpg'); /* l'image est là car c'est en bannière en dessous du texte */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 350px;        /* bannière de taille raisonnable */
+  padding: 40px 60px;
+  color: white;             /* à adapter selon la photo */
+  position: relative;
+
+  z-index: 1;
+}
+
+.accueil-introduction::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* plus foncé pour mieux voir le texte */
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.accueil-introduction > * {
+  position: relative;
+  z-index: 2;
+}
+
+.accueil-introduction h1 {
+    margin-bottom: 15px;
+}
+  
+.accueil-introduction p {
+    margin-bottom: 30px;
+}
+  
+.accueil-introduction div {
+    padding-right: 80px;
+}
+
+.accueil-introduction h1, 
+.accueil-introduction p {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* permet de mettre un ombrage sur le texte pour qu'il ressorte mieux */
+}
