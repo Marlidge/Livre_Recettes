@@ -34,47 +34,95 @@
 
                 <h1>Ajouter une Recette</h1>
                 
-                <form class="add-recipe-form" method="get" action="#">
+               <form class="add-recipe-form" method="get" action="#">
 
-                    <div class="form-group">
-                        <label for="recipe-name">Nom de la Recette</label>
-                        <input type="text" id="recipe-name" name="nom" placeholder="Nom de la recette">
+                    <!-- Nom de la recette -->
+                    <div class="form-group recipe-name-group">
+                        <label for="recipe-name" class="section-title">Nom de la Recette</label>
+                        <div class="input-fav-wrapper">
+                            <input type="text" id="recipe-name" name="nom" placeholder="Nom de la recette">
+                            <button class="btn-favoris" aria-pressed="false" onclick="this.classList.toggle('active')">
+                                <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#6B486B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 21C12 21 6 16 4 11.5C2 7.5 5 4 8 4C10 4 12 6 12 6C12 6 14 4 16 4C19 4 22 7.5 20 11.5C18 16 12 21 12 21Z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="macronutriments">
+                    <!-- Infos complémentaires-->
+                     <div class="rectangle-box extra-info">
+
+                        <!-- Ligne 1 : nb personnes + temps prep côte à côte -->
+                        <div class="top-info">
+                            <div class="form-group extra-info-item small-item">
+                            <img src="images/icone nb pers.png" alt="Personnes" class="icon-small">
+                            <label for="nb-personnes" class="section-title">Nombre de personnes</label>
+                            <input type="number" id="nb-personnes" name="nb_personnes" min="1" placeholder="Ex : 4">
+                            </div>
+
+                            <div class="form-group extra-info-item small-item">
+                            <img src="images/icone tps.png" alt="Temps" class="icon-small">
+                            <label for="temps-preparation" class="section-title">Temps de préparation</label>
+                            <input type="text" id="temps-preparation" name="temps_preparation" placeholder="Ex : 30 min">
+                            </div>
+                        </div>
+
+                        <!-- Ligne 2 : macronutriments -->
+                        <div class="icon-container">
+                            <img src="images/icone macro.png" alt="Macronutriments" class="icon-global">
+                        </div>
+
+                        <div class="macros-inputs">
+                            <div class="form-group extra-info-item">
+                            <label for="proteines" class="section-title">Protéines (g)</label>
+                            <input type="number" id="proteines" name="proteines" min="0" step="0.1" placeholder="Ex : 15">
+                            </div>
+
+                            <div class="form-group extra-info-item">
+                            <label for="lipides" class="section-title">Lipides (g)</label>
+                            <input type="number" id="lipides" name="lipides" min="0" step="0.1" placeholder="Ex : 10">
+                            </div>
+
+                            <div class="form-group extra-info-item">
+                            <label for="glucides" class="section-title">Glucides (g)</label>
+                            <input type="number" id="glucides" name="glucides" min="0" step="0.1" placeholder="Ex : 40">
+                            </div>
+                        </div>
 
                     </div>
 
-                    <div class="form-group">
-                        <p>
-                            <p>Catégories :</p> 
-                            <label><input type="checkbox" name="category" value="breakfast"> Breakfast</label>
-                            <label><input type="checkbox" name="category" value="lunch"> Lunch</label>
-                            <label><input type="checkbox" name="category" value="snack"> Snack</label>
-                            <label><input type="checkbox" name="category" value="dinner"> Dinner</label>
-                        </p>
-                            
+                    <!-- Catégories + Ingrédients côte à côte -->
+                    <div class="rectangle-box categories-ingredients">
+                    
+                        <div class="form-group categories">
+                            <label class="section-title">Catégories :</label>
+                            <label><input type="checkbox" name="category" value="petit-dejeuner"> Petit-déjeuner</label>
+                            <label><input type="checkbox" name="category" value="dejeuner"> Déjeuner</label>
+                            <label><input type="checkbox" name="category" value="gouter"> Goûter</label>
+                            <label><input type="checkbox" name="category" value="diner"> Dîner</label>
+                        </div>
+
+                        <div class="form-group ingredients">
+                            <label for="ingredient" class="section-title">Ingrédients</label>
+                            <input type="text" id="ingredient" placeholder="Ex : 2 tomates">
+                            <button type="button" onclick="ajouterIngredient()">Ajouter</button>
+                            <ul id="liste-ingredients"></ul>
+                        </div>
+
                     </div>
 
-                    <div class="form-group">
-
-                        <label for="ingredient">Ingrédients</label>
-                        <input type="text" id="ingredient" placeholder="Ex : 2 tomates">
-                        <button type="button" onclick="ajouterIngredient()">Ajouter</button>
-                        <ul id="liste-ingredients"></ul>
-
+                    <!-- Instructions -->
+                    <div class="rectangle-box">
+                        <div class="form-group">
+                            <label for="instructions_input" class="section-title">Instructions</label>
+                            <input type="text" id="instructions_input" placeholder="Décrivez une étape">
+                            <button type="button" onclick="ajouterInstructions()">Ajouter</button>
+                            <ol id="liste-instructions"></ol>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-
-                        <label for="instruction">Instructions</label>
-                        <input type="text" id="instructions_input" placeholder="Décrivez une étape">
-                        <button type="button" onclick="ajouterInstructions()">Ajouter</button>
-                        <ol id="liste-instructions"></ol>
-                    </div>
 
                     <button type="submit" class="submit-btn">Enregistrer la recette</button>
-
                 </form>
 
             </section>

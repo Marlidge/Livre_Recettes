@@ -5,7 +5,7 @@
 body {
   font-family: 'Manrope', sans-serif;
   font-size: 1em;
-  background-color: #FAFAF0;
+  background-color: #FAF3E0;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -13,7 +13,9 @@ body {
 
 h1 {
   font-size: 2.5em;
-  color: #4cb65c;
+  color: #6B486B;
+  text-align: center;
+  margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -61,22 +63,24 @@ p {
 
 .form-group button {
   margin-top: 10px;
-  align-self: flex-start;
-  background-color: #FFE66D;
+  align-self: center;
+  background-color: #6B486B;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  color: #FAF3E0;
 }
 
 .form-group button:hover {
-  background-color: #E6D75F;
+  background-color: #4A3650;
 }
 
 .submit-btn {
   padding: 12px 20px;
-  background-color: #A8D5BA;
+  background-color: #6B486B;
+  color: #FAF3E0;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -84,5 +88,203 @@ p {
 }
 
 .submit-btn:hover {
-  background-color: #89c5a2;
+  background-color: #4A3650;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: black;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+}
+
+/* Texte des labels des checkboxes en normal */
+.categories label:not(.section-title) {
+  font-weight: normal;
+}
+
+/* Bordures des rectangles */
+.rectangle-box {
+  border: 2px solid #6B486B;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #F7F1E9;
+}
+
+/* Catégories et ingrédients côte à côte */
+.categories-ingredients {
+  display: flex;
+  gap: 40px;
+}
+
+.categories-ingredients .categories,
+.categories-ingredients .ingredients {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Rectangles "extra-info" */
+.rectangle-box.extra-info {
+  padding: 20px;
+  border: 2px solid #6B486B; /* brun chaud (remplace vert menthe) */
+  border-radius: 10px;
+  background-color: #F7F1E9; /* beige très clair et doux, remplace vert clair */
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ligne 1 : nb pers + temps prep côte à côte */
+.top-info {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Petits items nb pers et temps prep */
+.small-item {
+  flex: 1;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Petites icônes */
+.icon-small {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+/* Icône globale macronutriments */
+.icon-container {
+  text-align: center;
+}
+
+.icon-global {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Macronutriments en ligne */
+.macros-inputs {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Chaque input macronutriments */
+.extra-info-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 150px;
+}
+
+/* Labels */
+.extra-info-item .section-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Inputs */
+.extra-info-item input, .small-item input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #8B6D5C; /* brun chaud */
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.icon-global {
+  width: 40px;   /* taille réduite */
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  width: 22px;  /* un peu plus petit */
+  height: 22px;
+  margin-bottom: 8px;
+}
+
+/* Bloc Nom de la recette */
+.recipe-name-group {
+  border: 2px solid #6B486B; /* prune foncé */
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #F7F1E9; /* beige ivoire clair */
+}
+
+/* Alignement input + cœur */
+.input-fav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Champ texte */
+.input-fav-wrapper input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+}
+
+.btn-favoris {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+  outline: none !important;
+  box-shadow: none !important;
+
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-favoris svg {
+  width: 24px;
+  height: 24px;
+  stroke: #6B486B;
+  fill: transparent;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.btn-favoris:hover svg {
+  fill: #6B486B;
+  stroke: #6B486B;
+}
+
+.btn-favoris.active svg {
+  fill: #6B486B;
+  stroke: #6B486B;
+}
+
+.btn-favoris:hover {
+  color: #8B6D5C;
+  transform: scale(1.1);
 }
