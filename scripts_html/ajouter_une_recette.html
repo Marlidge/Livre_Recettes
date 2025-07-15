@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Ajouter une Recette</title>
-        <link href="styles.css/style.css" rel="stylesheet" >
-        <link href="styles.css/ajouter.css" rel="stylesheet" >
+        <link href="../styles.css/style.css" rel="stylesheet" >
+        <link href="../styles.css/ajouter.css" rel="stylesheet" >
         <script src="ajouter_recette.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,16 +15,15 @@
         <header>
             <nav>
             <a href="accueil.html" class="lien-icone">
-                    <img src="images/recipe-book.png" alt="Logo Livre de recette">
+                    <img src="../images/recipe-book.png" alt="Logo Livre de recette">
                     Livres de Recettes
                 </a>
 
                 <div class="navigation">
                     <a href="accueil.html">Accueil</a>
-                    <a href="recettes">Recettes</a>
+                    <a href="recettes.html">Recettes</a>
                     <a href="ajouter_une_recette.html">Ajouter une Recette</a>
-                    <a href="favoris">Favoris</a>
-                    <a href="recherche">Recherche</a>
+                    <a href="favoris.html">Favoris</a>
                 </div>
             </nav>
         </header>
@@ -55,13 +54,13 @@
                         <!-- Ligne 1 : nb personnes + temps prep côte à côte -->
                         <div class="top-info">
                             <div class="form-group extra-info-item small-item">
-                            <img src="images/icone nb pers.png" alt="Personnes" class="icon-small">
+                            <img src="../images/icone nb pers.png" alt="Personnes" class="icon-small">
                             <label for="nb-personnes" class="section-title">Nombre de personnes</label>
                             <input type="number" id="nb-personnes" name="nb_personnes" min="1" placeholder="Ex : 4">
                             </div>
 
                             <div class="form-group extra-info-item small-item">
-                            <img src="images/icone tps.png" alt="Temps" class="icon-small">
+                            <img src="../images/icone tps.png" alt="Temps" class="icon-small">
                             <label for="temps-preparation" class="section-title">Temps de préparation</label>
                             <input type="text" id="temps-preparation" name="temps_preparation" placeholder="Ex : 30 min">
                             </div>
@@ -69,7 +68,7 @@
 
                         <!-- Ligne 2 : macronutriments -->
                         <div class="icon-container">
-                            <img src="images/icone macro.png" alt="Macronutriments" class="icon-global">
+                            <img src="../images/icone macro.png" alt="Macronutriments" class="icon-global">
                         </div>
 
                         <div class="macros-inputs">

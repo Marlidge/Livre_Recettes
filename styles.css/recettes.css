@@ -1,0 +1,166 @@
+/* 
+  ====================================
+   RESET & BASE GÉNÉRALE
+  ==================================== 
+*/
+
+/* Enlève la marge par défaut pour tous les éléments */
+* {
+  margin: 0;
+}
+
+/* Style global de la page */
+body {
+  font-family: 'Manrope', sans-serif;  
+  font-size: 1em;                       
+  background-color: #FAF3E0; 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Titre principal */
+h1 {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 2.5em;
+  color: #6B486B;     
+  text-align: center;
+  margin: 50px 0 40px 0; /* Espace autour du titre */
+}
+
+/* Paragraphes */
+p {
+  color: black;
+  text-decoration: none;
+}
+
+/* 
+  ====================================
+   CONTAINER PRINCIPAL
+  ==================================== 
+*/
+
+.category {
+  margin-bottom: 3rem; /* par exemple */
+  padding-left: 1rem;
+}
+
+.category h2 {
+  display: inline-block; /* Pour que le fond coloré ne prenne que le texte */
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 2em;
+  color: black;     
+  margin-left: 1rem;
+  margin: 50px 0 40px 0; /* Espace autour du titre */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.breakfast h2 {
+  background-color: #FFE66D; 
+  color: black; 
+}
+
+.lunch h2 {
+  background-color: #A8D5BA; 
+  color: black; 
+}
+
+.snack h2 {
+  background-color: #FFB385; 
+  color: black; 
+}
+
+.dinner h2 {
+  background-color: #ff70c8; 
+  color: black; 
+}
+
+/* 
+  ====================================
+   Grille des Recettes
+  ==================================== 
+*/
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 
+  ====================================
+   Grille des Cartes
+  ==================================== 
+*/
+
+.recipe-card {
+  position: relative;  /* pour que le badge se positionne par rapport à la carte */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* ----- TITRE ----- */
+
+.recipe-card h3 {
+  font-size: 1rem;
+  margin: 1rem;
+  font-weight: 600;
+}
+
+/* ----- IMAGE ----- */
+
+.recipe-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 16px;
+  border-radius: 15% ;
+}
+
+/* ----- BADGE CATEGORIE ----- */
+
+.badge-category {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 12px;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  z-index: 10;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Couleurs par catégorie */
+.category.breakfast .recipe-card .badge-category {
+  background-color: #FFE66D; 
+  color: black; 
+  box-shadow: none;
+}
+
+.category.lunch .recipe-card .badge-category {
+  background-color: #A8D5BA; 
+}
+
+.category.snack .recipe-card .badge-category {
+  background-color: #FFB385; 
+}
+
+.category.dinner .recipe-card .badge-category {
+  background-color: #ff70c8; 
+}
