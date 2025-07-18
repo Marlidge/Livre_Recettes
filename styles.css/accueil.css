@@ -11,7 +11,7 @@ p {
   justify-content: center;
   align-items: flex-start;
 
-  background-image: url('../images/kitchen_banner.jpg'); /* l'image est là car c'est en bannière en dessous du texte */
+  background-image: url('../images/kitchen.jpg'); /* l'image est là car c'est en bannière en dessous du texte */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -3,107 +3,94 @@
    RESET & BASE GÉNÉRALE
   ==================================== 
 */
-
-/* Enlève la marge par défaut pour tous les éléments */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Style global de la page */
 body {
-  font-family: 'Manrope', sans-serif;  
-  font-size: 1em;                       
-  background-color: #FAF3E0; 
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #FAF9F6;
   margin: 0;
   padding: 0;
   height: 100%;
+  color: #2C2C2C;
 }
 
-/* Titre principal */
 h1 {
-  font-family: 'Montserrat', sans-serif; 
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5em;
-  color: #6B486B;     
+  color: #3B3B58;
   text-align: center;
-  margin: 50px 0 40px 0; /* Espace autour du titre */
+  margin: 50px 0 40px 0;
 }
 
-/* Paragraphes */
 p {
-  color: black;
+  color: #2C2C2C;
   text-decoration: none;
 }
-
 
 /* 
   ====================================
    CONTAINER PRINCIPAL
   ==================================== 
 */
-
-/* Conteneur blanc arrondi au centre */
 .add-recipe-container {
-  max-width: 700px;                           /* Largeur max */
-  margin: 0 auto;                             /* Centré horizontalement */
-  padding: 0 2rem 2rem 2rem;                  /* Espace intérieur */
-  background: white;                        
-  border-radius: 10px;                        /* Coins arrondis */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Ombre légère */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Formulaire en colonne avec espaces réguliers */
 .add-recipe-form {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Espace vertical entre blocs */
+  gap: 30px;
 }
-
 
 /* 
   ====================================
    NOM DE LA RECETTE + FAVORI
   ==================================== 
 */
-
-/* Bloc encadré pour le nom de recette */
 .recipe-name-group {
-  border: 2px solid #6B486B;            
+  border: 2px solid #3B3B58;
   border-radius: 10px;
   padding: 15px;
-  background-color: #F7F1E9;            
+  background-color: #F0ECE7;
 }
 
-/* Conteneur pour aligner input et cœur en ligne */
 .input-fav-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;           /* Espace entre input et bouton */
+  gap: 10px;
   width: 100%;
 }
 
-/* Champ texte du nom */
 .input-fav-wrapper input {
-  flex: 1;                            /* Prend toute la place dispo */
+  flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   border-radius: 5px;
   font-family: 'Manrope', sans-serif;
   font-size: 1em;
 }
 
-/* Bouton cœur favori */
 .btn-favoris {
-  background: transparent !important;   /* Pas de fond */
-  border: none !important;              /* Pas de bordure */
+  background: transparent !important;
+  border: none !important;
   padding: 0 !important;
   cursor: pointer;
-  color: #ccc;
+  color: #999;
   font-size: 1.6rem;
   line-height: 1;
   transition: color 0.2s ease, transform 0.2s ease;
-  outline: none !important;             /* Supprime contour focus par défaut */
+  outline: none !important;
   box-shadow: none !important;
-
   width: 40px;
   height: 40px;
   display: flex;
@@ -111,54 +98,47 @@ p {
   justify-content: center;
 }
 
-/* Icône cœur vide */
 .btn-favoris svg {
   width: 24px;
   height: 24px;
-  stroke: #6B486B;                   /* Couleur de contour */
-  fill: transparent;                   /* Vide par défaut */
+  stroke: #3B3B58;
+  fill: transparent;
   transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
-/* Cœur rempli quand survolé ou actif */
 .btn-favoris:hover svg,
 .btn-favoris.active svg {
-  fill: #6B486B;                        
-  stroke: #6B486B;
+  fill: #EC6C4D;
+  stroke: #EC6C4D;
 }
 
 .btn-favoris:hover {
-  transform: scale(1.1);                /* Petit effet zoom au survol */
+  transform: scale(1.1);
 }
-
 
 /* 
   ====================================
-   INFOS EXTRA (pers, temps, macros)
+   INFOS EXTRA
   ==================================== 
 */
-
-/* Boîte encadrée pour infos extra */
 .rectangle-box.extra-info {
-  border: 2px solid #6B486B;
+  border: 2px solid #3B3B58;
   border-radius: 10px;
   padding: 20px;
-  background-color: #F7F1E9;
+  background-color: #F0ECE7;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Espace interne entre éléments */
+  gap: 20px;
 }
 
-/* Ligne du haut : nb pers + temps côte à côte */
 .top-info {
   display: flex;
-  gap: 40px; /* Espace entre blocs */
+  gap: 40px;
   width: 100%;
   justify-content: center;
 }
 
-/* Petit bloc unité : nb pers ou temps */
 .small-item {
   flex: 1;
   max-width: 200px;
@@ -167,26 +147,22 @@ p {
   align-items: center;
 }
 
-/* Petite icône unité */
 .icon-small {
   width: 22px;
   height: 22px;
   margin-bottom: 8px;
 }
 
-/* Conteneur de l'icône macros */
 .icon-container {
   text-align: center;
 }
 
-/* Grande icône macros */
 .icon-global {
   width: 40px;
   height: 40px;
   margin-bottom: 10px;
 }
 
-/* Ligne macronutriments en ligne */
 .macros-inputs {
   display: flex;
   gap: 30px;
@@ -194,7 +170,6 @@ p {
   justify-content: center;
 }
 
-/* Chaque bloc input macronutriment */
 .extra-info-item {
   display: flex;
   flex-direction: column;
@@ -208,37 +183,31 @@ p {
   text-align: center;
 }
 
-/* Inputs */
 .extra-info-item input,
 .small-item input {
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid #8B6D5C;           
+  border: 1px solid #999;
   font-family: 'Manrope', sans-serif;
   font-size: 1em;
-  box-sizing: border-box;
   width: 100%;
 }
-
 
 /* 
   ====================================
    CATÉGORIES & INGRÉDIENTS
   ==================================== 
 */
-
-/* Boîte encadrée générique */
 .rectangle-box {
-  border: 2px solid #6B486B;
+  border: 2px solid #3B3B58;
   border-radius: 10px;
   padding: 20px;
-  background-color: #F7F1E9;
+  background-color: #F0ECE7;
 }
 
-/* Deux colonnes côte à côte */
 .categories-ingredients {
   display: flex;
-  gap: 40px; /* Espace entre catégories et ingrédients */
+  gap: 40px;
 }
 
 .categories-ingredients .categories,
@@ -248,19 +217,15 @@ p {
   flex-direction: column;
 }
 
-/* Texte normal pour labels des cases à cocher */
 .categories label:not(.section-title) {
   font-weight: normal;
 }
-
 
 /* 
   ====================================
    INSTRUCTIONS
   ==================================== 
 */
-
-/* Bloc instructions */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -283,45 +248,40 @@ p {
   min-height: 100px;
 }
 
-
 /* 
   ====================================
    TITRES & BOUTONS GÉNÉRAUX
   ==================================== 
 */
-
-/* Sous-titres */
 .section-title {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  color: black;
+  color: #2C2C2C;
   font-family: 'Manrope', sans-serif;
   font-size: 1em;
 }
 
-/* Bouton interne (ex: ajouter un ingrédient) */
 .form-group button {
   margin-top: 10px;
   align-self: center;
-  background-color: #6B486B;
+  background-color: #EC6C4D;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  color: #FAF3E0;
+  color: white;
 }
 
 .form-group button:hover {
-  background-color: #4A3650; /* Plus foncé au survol */
+  background-color: #B94B35;
 }
 
-/* Bouton de soumission principal */
 .submit-btn {
   padding: 12px 20px;
-  background-color: #6B486B;
-  color: #FAF3E0;
+  background-color: #EC6C4D;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -329,5 +289,5 @@ p {
 }
 
 .submit-btn:hover {
-  background-color: #4A3650;
+  background-color: #B94B35;
 }

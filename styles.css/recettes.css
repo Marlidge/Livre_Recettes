@@ -4,33 +4,43 @@
   ==================================== 
 */
 
-/* Enlève la marge par défaut pour tous les éléments */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Style global de la page */
 body {
   font-family: 'Manrope', sans-serif;  
   font-size: 1em;                       
-  background-color: #FAF3E0; 
+  background-color: #FAF9F6;  /* beige neutre */
   margin: 0;
   padding: 0;
   height: 100%;
+  color: #2C2C2C; /* texte sombre */
 }
 
 /* Titre principal */
 h1 {
   font-family: 'Montserrat', sans-serif; 
-  font-size: 2.5em;
-  color: #6B486B;     
+  font-size: 3em;
+  color: #FAF9F6;    /* blanc/beige clair */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
   text-align: center;
-  margin: 50px 0 40px 0; /* Espace autour du titre */
+  margin: 50px 0 40px 0;
+  font-weight: 700;
+}
+
+/* Titres secondaires */
+h2, h3 {
+  color: #2C2C2C; /* texte sombre */
 }
 
 /* Paragraphes */
 p {
-  color: black;
+  color: #2C2C2C; /* texte sombre */
+  font-size: 1.2em;
   text-decoration: none;
 }
 
@@ -41,39 +51,24 @@ p {
 */
 
 .category {
-  margin-bottom: 3rem; /* par exemple */
+  margin-bottom: 3rem;
   padding-left: 1rem;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  background-color: #FAF9F6; /* beige neutre */
 }
 
 .category h2 {
-  display: inline-block; /* Pour que le fond coloré ne prenne que le texte */
+  display: inline-block;
   font-family: 'Montserrat', sans-serif; 
   font-size: 2em;
-  color: black;     
+  color: #2C2C2C;
   margin-left: 1rem;
-  margin: 50px 0 40px 0; /* Espace autour du titre */
+  margin: 0 0 20px 0;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-}
-
-.breakfast h2 {
-  background-color: #FFE66D; 
-  color: black; 
-}
-
-.lunch h2 {
-  background-color: #A8D5BA; 
-  color: black; 
-}
-
-.snack h2 {
-  background-color: #FFB385; 
-  color: black; 
-}
-
-.dinner h2 {
-  background-color: #ff70c8; 
-  color: black; 
+  text-align: center;
 }
 
 /* 
@@ -95,7 +90,7 @@ p {
 */
 
 .recipe-card {
-  position: relative;  /* pour que le badge se positionne par rapport à la carte */
+  position: relative;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -116,6 +111,7 @@ p {
   font-size: 1rem;
   margin: 1rem;
   font-weight: 600;
+  color: #2C2C2C;
 }
 
 /* ----- IMAGE ----- */
@@ -126,7 +122,7 @@ p {
   object-fit: cover;
   object-position: center;
   padding-top: 16px;
-  border-radius: 15% ;
+  border-radius: 15%;
 }
 
 /* ----- BADGE CATEGORIE ----- */
@@ -139,7 +135,7 @@ p {
   font-size: 0.85rem;
   font-weight: 600;
   border-radius: 12px;
-  color: black;
+  color: white;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
   z-index: 10;
   user-select: none;
@@ -147,20 +143,37 @@ p {
 }
 
 /* Couleurs par catégorie */
+
 .category.breakfast .recipe-card .badge-category {
-  background-color: #FFE66D; 
-  color: black; 
-  box-shadow: none;
+  background-color: #EC6C4D; /* orange corail */
 }
 
 .category.lunch .recipe-card .badge-category {
-  background-color: #A8D5BA; 
+  background-color: #3B3B58; /* bleu nuit doux */
 }
 
 .category.snack .recipe-card .badge-category {
-  background-color: #FFB385; 
+  background-color: #8bd1a7; /* vert menthe doux */
 }
 
 .category.dinner .recipe-card .badge-category {
-  background-color: #ff70c8; 
+  background-color: #FFB385; /* orange clair */
+}
+
+/* Couleurs de fond des catégories */
+
+.breakfast {
+  background-color: #FDEEE9; /* très clair, corail doux */
+}
+
+.lunch {
+  background-color: #E1E1F2; /* bleu nuit très pâle */
+}
+
+.snack {
+  background-color: #D4EADC; /* vert menthe très clair */
+}
+
+.dinner {
+  background-color: #FFEBD6; /* orange très clair */
 }
